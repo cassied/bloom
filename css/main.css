@@ -15,7 +15,7 @@ body {
 }
 
 .nav,.footer {
-	height: 85px;
+	height: 75px;
    	position: relative;
   	display: block;
   	background-color: #fff !important;
@@ -28,18 +28,17 @@ body {
 
 }
 .banner {
-	background-image: url('../img/dandelion-banner.jpg');
-	background-repeat: no-repeat;
-	background-position: center top;
     	background-color: #fff;
-    	height: 600px;
+    	height: 675px;
    	position: relative;
   	display: block;
 }
 
 .bannerText {
-	margin: 250px auto 0 auto;
+	margin: -350px auto 0 auto;
 	text-align: center;
+	z-index: 1000;
+	position: relative;
 }
 
 .bannerText p {
@@ -52,12 +51,12 @@ body {
 	font-size: 50px;
 }
 
-.banner ul {
+.navmain ul {
     margin: 0 0 0 495px;
     list-style-type: none;
     font-size: 13px;
 }
-.banner li {
+.navmain li {
     float:left;
     padding: 30px 25px 5px 5px;
     color: #f2b873;
@@ -258,7 +257,7 @@ h3.spanWhite {
 }
 #footer li {
     float:left;
-    padding: 45px 25px 5px 0px;
+    padding: 20px 25px 5px 0px;
 }
 
 #footer a {
@@ -270,7 +269,7 @@ h3.spanWhite {
 	float: right;
 	color: #979797;
 	font-size:13px;
-	padding-top: 45px;
+	padding-top: 20px;
 }
 
 .form {
@@ -300,6 +299,9 @@ h3.spanWhite {
 
 .margin5 {
 	margin: 5px;
+}
+.marginTop5 {
+	margin-top: 5px;
 }
 
 .margRight20 {
@@ -364,4 +366,17 @@ h3.spanWhite {
 .formText {
 	display: inline-block;
 	width:400px;
+}
+
+.demo_wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+@media only screen and (max-device-width: 800px), screen and (max-width: 800px) {
+  .demo_wrapper {
+    width: 80%;
+  }  
+}
+.demo_block {
+	width: 100%;
 }

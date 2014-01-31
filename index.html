@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Bloom</title>
        	<link rel="stylesheet" href="css/main.css">
+       	<link rel="stylesheet" href="css/slippry.css">
        	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
        	<link rel="stylesheet" href="css/jquery-ui.css">
   		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  		<script src="js/slippry.js"></script>
   		<script>
 		  $(function() {
 		    $( "#tabs" ).tabs();
@@ -18,7 +20,7 @@
 	<div class="banner">
 		<div class="nav">
 			<div class="main navmain">
-				<ul>
+				<ul class="bannerLIST">
 					<li><a href="">HOME</a></li>
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#work">WORK</a></li>
@@ -27,15 +29,66 @@
 				</ul>
 			</div>
 		</div>
-		<div class="bannerText main">
-			<h2>WE ARE BLOOM</h2>
-			<p>We do digital &amp; we do it<br />with a difference.</p>
-		</div>
+		<section class="demo_wrapper">
+			<article class="demo_block">
+			<ul id="demo1">
+				<li><a href="#slide2"><img src="img/image-3.jpg"></a></li>
+				<li><a href="#slide1"><img src="img/image-1.jpg"></a></li>
+			</ul>
+			</article>
+			
+			<div class="bannerText main">
+				<h2>WE ARE BLOOM</h2>
+				<p>We do digital &amp; we do it<br />with a difference.</p>
+			</div>
+		</section>		
+
+		<script>
+			$(function() {
+				var demo1 = $("#demo1").slippry({
+					transition: 'fade',
+					useCSS: true,
+					speed: 2000,
+					pause: 8000,
+					auto: true,
+					preload: 'visible'
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#demo1").slippry();
+					return false;
+				});
+			});
+		</script>
 	</div>
 	<div id="about">
 		<div class="main">
 			<h2>THE BLOOM STORY</h2>
-			<h3 class="span"><span>SOME THINGS YOU SHOULD NOW ABOUT US</span></h3>
+			<h3 class="span"><span>SOME THINGS YOU SHOULD KNOW ABOUT US</span></h3>
 			<div class="aboutBannerText">
 				<h3>FROM HUMBLE BEGINNINGS</h3>
 			</div>
@@ -51,7 +104,7 @@
 		  		<h2>A BIT ABOUT OUR PAST</h2>
 		  	</div>
 		  	<div class="aboutTabs-col2">
-		    <p>Proin elit arcu, rutrum commodo, v SUPehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat.</p>
+		    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat.</p>
 		  </div>
 		</div>
 		  <div id="tabs-2">
@@ -136,8 +189,8 @@
 				</div>
 			</div>
 			<div class="form">
-				<div class="pin margin5"></div>
-				<div class="formText margin5"><p>The Bloom Agency<br/>12 Windyside Road,<br />Glasgow,<br /> G14 1DF</p></div>
+				<div class="pin marginTop5"></div>
+				<div class="formText margin5" style="margin-left:15px;"><p>The Bloom Agency<br/>12 Windyside Road,<br />Glasgow,<br /> G14 1DF</p></div>
 				<div class="envelope" style="margin-top:17px;"></div>
 				<div class="formText" style="margin:20px 15px;"><p>enquiries@bloom.com</p></div>
 				<div class="phone" style="margin-top:17px;"></div>

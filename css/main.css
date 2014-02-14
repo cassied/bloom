@@ -11,9 +11,9 @@ body {
 }
 .main {
 	max-width: 960px;
-    	margin: 0 auto 0 auto;
+    	margin: 40px auto 0 auto;
 }
-
+.nav {position: fixed !important;z-index:1001;width:100%;}
 .nav,.footer {
 	height: 75px;
    	position: relative;
@@ -25,11 +25,13 @@ body {
 	background-repeat: no-repeat;
 	background-position: left center;
 	height: 75px; 
+	max-width: 960px;
+    	margin: 0 auto 0 auto;
 
 }
 .banner {
     	background-color: #fff;
-    	height: 675px;
+    	height: 600px;
    	position: relative;
   	display: block;
 }
@@ -58,19 +60,20 @@ body {
 }
 .navmain li {
     float:left;
-    padding: 30px 25px 5px 5px;
+    padding: 30px 5px 5px 25px;
     color: #f2b873;
 }
 
-.banner a {
+.navmain a {
 	text-decoration: none;
 	color: #f2b873;
 }
 #about {
-	height: 900px;
+	height: auto;
+	padding:20px 0 40px;
 	background-image: url('../img/about-banner.png');
 	background-repeat: no-repeat;
-	background-position: 50% 130px;
+	background-position: 50% 190px;
 	text-align: center;
 }
 
@@ -113,9 +116,9 @@ body {
 
 #work {
 	background-color: #f8b156;
-	height: 725px;
+	height: auto;
+	padding:20px 0 40px;
 	text-align: center;
-	padding-top:20px;
 }
 
 #work h2 {
@@ -186,7 +189,8 @@ body {
 
 #services {
 	background-color: #66bdb8;
-	height: 500px;
+	height: auto;
+	padding:20px 0 40px;
 	text-align: center;
 	padding-top:20px;
 }
@@ -228,7 +232,7 @@ h3.spanWhite {
 	background-color: #73d6d0;
 	height:600px;
 	text-align: center;
-	padding-top:20px;
+	padding: 20px 0 40px;
 }
 
 #contact h2 {
@@ -250,6 +254,8 @@ h3.spanWhite {
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 100px;
+	max-width: 960px;
+    	margin: 0 auto 0 auto;
 }
 #footer ul {
     list-style-type: none;

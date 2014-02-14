@@ -21,9 +21,6 @@ body {
   	background-color: #fff !important;
 }
 .navmain {
-	background-image: url('../img/logo.png');
-	background-repeat: no-repeat;
-	background-position: left center;
 	height: 75px; 
 
 }
@@ -62,7 +59,7 @@ body {
     color: #f2b873;
 }
 
-.banner a {
+.navmain a {
 	text-decoration: none;
 	color: #f2b873;
 }
